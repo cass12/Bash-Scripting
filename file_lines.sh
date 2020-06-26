@@ -35,7 +35,7 @@ do
    elif [[ -h ${arg} ]]; then 
        echo "Argument is symbolic link"
         sym_link=$(readlink -f <linkname>)  
- 	echo "This link point to $sym_link"
+ 	echo "This link points to $sym_link"
    else 
        echo "Not a valid argument: use file, directory or symlink" 
        exit 1
