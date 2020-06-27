@@ -6,6 +6,8 @@ do
        echo "Argument is directory"
 	nr_files=$(find $arg -type f | wc -l)
  	echo "Nr of files in current directory: $nr_files"
+	nr_subdir=$( find $arg/* -maxdepth 0 -type d | wc -l)
+        echo "Number of subdirectories in current directory: $nr_subdir"
    elif [[ -f ${arg} ]]; then
        echo "Argument is a file"
 	nr_chars=$(wc -c $arg)
